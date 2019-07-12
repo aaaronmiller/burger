@@ -1,6 +1,16 @@
-li {
-  padding: 5px;
-  margin: 5px;
+body {
+  background-image: url(burger.jpg);
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+
+
+ul {
+  font-weight: bold;
+  list-style-type: none;
+  text-align: center;
+  padding: 15px;
+  margin: 15px;
   background: #faebd7;
 }
 
@@ -16,4 +26,25 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+
+.card {
+  margin-bottom: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+button {
+  border-radius: 25px;
+  color: rgb(226, 223, 223);
+
+  background-color: rgb(218, 50, 50);
+
+}
+
+button:hover {
+  color:rgb(218, 50, 50);
+
+  background-color: rgb(226, 222, 222)
+
 }

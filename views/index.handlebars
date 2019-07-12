@@ -1,38 +1,76 @@
+<div style="text-align:center; font-family: 'Merriweather', serif">
 <h1>Eat-da-Burgers!</h1>
+</div>
+<br>
 
-<h2>Burgers not devoured!</h2>
+<div class="container">
+  <div class="row justify-content-center">
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+    <div class="col-md-4">
+      <br>
+      <div class="card" style="border-radius: 25px; background-color:rgb(247, 165, 33)">
+        <h5 class="card-header">Burgers not devoured!</h5>
+        <div class="card-body">
+          {{!-- <h5 class="card-title">Special title treatment</h5> --}}
+          <p class="card-text"  style="text-align:center">
+            <ul>
+              {{#each burgers}}
+              {{#if devoured}}
+              {{> burgers/burger-block devoured=false}}
+              {{/if}}
+              {{/each}}
+            </ul>
+          </p>
+          {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+        </div>
+      </div>
+    </div>
 
-<h2>Burgers that are devoured!</h2>
+    <div class="col-md-4">
+      <div class="card text-center" style="background-color: #faebd7, border-radius: 25px">
+        <div class="card-header" style="background-color: #faebd7" >
+          <h2>Add a Burger</h2>
+        </div>
+        <div class="card-body" style="background-color:rgb(247, 165, 33)">
+          {{!-- <h5 class="card-title">Special title treatment</h5> --}}
+          <form class="create-form">
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+            <div class="form-group">
+              <label for="bgr">Burger Name:</label>
+              <input type="text" id="bgr" name="name">
+            </div>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+            <div class="form-group">
+              <label for="devoured">Devoured?</label><br>
+              <input type="radio" name="devoured" value="1" checked> Eaten!<br>
+              <input type="radio" name="devoured" value="0"> Un-eaten
+            </div>
 
-  <div class="form-group">
-    <label for="bgr">Burger Name:</label>
-    <input type="text" id="bgr" name="name">
+            <button type="submit">Add Burger</button>
+          </form>
+          <p class="card-text"></p>
+          {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4">
+      <br>
+      <div class="card" style="border-radius: 25px; background-color:rgb(247, 165, 33)">
+        <h5 class="card-header">Burgers that are devoured!</h5>
+        <div class="card-body">
+          {{!-- <h5 class="card-title">Special title treatment</h5> --}}
+          <p class="card-text" style="text-align:center">
+            <ul>
+              {{#each burgers}}
+              {{#unless devoured}}
+              {{> burgers/burger-block devoured=true}}
+              {{/unless}}
+              {{/each}}
+            </ul>
+          </p>
+          {{!-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Eaten!<br>
-    <input type="radio" name="devoured" value="0"> Un-eaten
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
