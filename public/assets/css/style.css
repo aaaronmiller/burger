@@ -37,14 +37,10 @@ ul {
 button {
   border-radius: 25px;
   color: rgb(226, 223, 223);
-
   background-color: rgb(218, 50, 50);
-
 }
 
 button:hover {
   color:rgb(218, 50, 50);
-
   background-color: rgb(226, 222, 222)
-
 }

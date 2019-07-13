@@ -12,8 +12,9 @@ USE burger_db;
 
 CREATE TABLE Burgers
 (
-	id int NOT NULL AUTO_INCREMENT,
-	burger_name varchar(255) NOT NULL,
-	devoured BOOLEAN DEFAULT false,
+	id INT AUTO_INCREMENT NOT NULL,
+	burger_name VARCHAR(255) NOT NULL,
+	devoured BOOLEAN DEFAULT FALSE,
+	createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
 	PRIMARY KEY (id)
 );

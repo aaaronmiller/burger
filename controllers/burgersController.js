@@ -1,13 +1,9 @@
 var express = require("express");
 
 var router = express.Router();
-var favicon = require('serve-favicon')
-var path = require('path');
+
 // Import the model (burger.js) to use its database functions.
 var burger = require("../models/burger.js");
-
-var app = express()
-app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')))
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
