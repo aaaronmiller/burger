@@ -1,5 +1,8 @@
 body {
   background-image: url(burger.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom; 
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
 }
